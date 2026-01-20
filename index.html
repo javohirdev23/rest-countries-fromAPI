@@ -29,8 +29,27 @@
     </div>
 
     <div
-      class="flex w-90 mx-auto mt-10 justify-end sm:w-140 md:w-180 xl:w-240 lg:w-290"
+      class="flex w-90 mx-auto mt-10 justify-between gap-4 sm:w-140 md:w-180 xl:w-240 lg:w-290"
     >
+      <label class="input">
+        <svg
+          class="h-[1em] opacity-50"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2.5"
+            fill="none"
+            stroke="currentColor"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </g>
+        </svg>
+        <input type="search" required placeholder="Search" />
+      </label>
       <select class="select select-neutral w-40 sm:w-70">
         <option disabled selected>Filter by region</option>
         <option>Africa</option>
@@ -55,7 +74,7 @@
           <figure>
             <img src="" alt="countr flag" />
           </figure>
-          <div class="card-body">
+          <div class="card-body grid justify-center items-center">
             <h2 class="name font-bold text-10"></h2>
             <div class="flex pt-4">
               <span class="font-bold">Population:&nbsp;</span>
