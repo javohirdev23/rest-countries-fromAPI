@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/fivicon.png "
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Countryies</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <div class="flex justify-center">
+      <div
+        class="navbar bg-base-100 shadow-sm flex justify-between w-100 mx-auto mt-6 sm:w-150 md:w-190 xl:250 lg:w-300"
+      >
+        <div><a class="btn btn-ghost text-xl">Where in the world?</a></div>
+
+        <!-- light & dark mode  -->
+        <div class="pr-5">
+          <button class="btn dark__mode">🌙</button>
+          <button class="btn hidden light__mode">☀️</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex w-90 mx-auto mt-10 justify-end sm:w-140 md:w-180 xl:w-240 lg:w-290"
+    >
+      <select class="select select-neutral w-40 sm:w-70">
+        <option disabled selected>Filter by region</option>
+        <option>Africa</option>
+        <option>America</option>
+        <option>Asia</option>
+        <option>Europe</option>
+        <option>Oceania</option>
+      </select>
+    </div>
+    <!-- Container -->
+
+    <div
+      id="container"
+      class="grid grid-cols-1 gap-10 mt-12 justify-center md:grid-cols-2 xl:grid-cols-4 lg:w-7xl max-w-7xl mx-auto cursor-pointer"
+    ></div>
+    <!-- Card template  -->
+    <template id="templateCard">
+      <div class="tooltip inline-block" data-tip="More Information">
+        <div
+          class="card bg-base-100 shadow-sm w-66 m-w-66 mx-auto hover:shadow-stone-600"
+        >
+          <figure>
+            <img src="" alt="countr flag" />
+          </figure>
+          <div class="card-body">
+            <h2 class="name font-bold text-10"></h2>
+            <div class="flex pt-4">
+              <span class="font-bold">Population:&nbsp;</span>
+              <p class="population not-dark:text-gray-800"></p>
+            </div>
+            <div class="flex">
+              <span class="font-bold">Region:&nbsp;</span>
+              <p class="region not-dark:text-gray-800"></p>
+            </div>
+            <div class="flex">
+              <span class="font-bold">Capital:&nbsp;</span>
+              <p class="capital not-dark:text-gray-800"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script type="module" src="../js/mode.mjs"></script>
+    <script type="module" src="../js/app.mjs"></script>
+  </body>
+</html>

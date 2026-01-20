@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="flex justify-center">
+      <div
+        class="navbar bg-base-100 shadow-sm flex justify-between w-100 mx-auto mt-6 sm:w-150 md:w-190 xl:250 lg:w-300"
+      >
+        <div><a class="btn btn-ghost text-xl">Where in the world?</a></div>
+
+        <!-- light & dark mode  -->
+        <div class="pr-5">
+          <button class="btn dark__mode">🌙</button>
+          <button class="btn hidden light__mode">☀️</button>
+        </div>
+      </div>
+    </div>
+    <!-- Back button -->
+    <div class="tooltip ml-10 mt-10" data-tip="Back to Main">
+      <a href="../main.html/index.html"
+        ><button class="btn"><span>← &nbsp;</span>Back</button></a
+      >
+    </div>
+    <script type="module" src="../js/mode.mjs"></script>
+  </body>
+</html>
