@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
   <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/fiviconInfo.png "
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Information</title>
@@ -27,6 +33,48 @@
         ><button class="btn"><span>← &nbsp;</span>Back</button></a
       >
     </div>
+    <div id="infoBox"></div>
+    <!-- Template card -->
+    <template id="infoTemplate">
+      <div class="flex justify-center gap-10 mt-20">
+        <div>
+          <img src="" alt="" />
+        </div>
+        <div class="flex flex-col gap-2 justify-center">
+          <h2></h2>
+          <div>
+            <span class="font-bold">Native name:&nbsp;&nbsp;</span>
+            <p class="nativeName"></p>
+          </div>
+          <div>
+            <span class="font-bold">Population:&nbsp;&nbsp;</span>
+            <p class="population"></p>
+          </div>
+          <div>
+            <span class="font-bold">Region:&nbsp;&nbsp;</span>
+            <p class="region"></p>
+          </div>
+          <div>
+            <span class="font-bold">Sub region:&nbsp;&nbsp;</span>
+            <p class="subRegion"></p>
+          </div>
+          <div>
+            <span class="font-bold">Capital:&nbsp;&nbsp;</span>
+            <p class="capital"></p>
+          </div>
+        </div>
+      </div>
+    </template>
+    <!-- Template skeleton -->
+     <template id="infoTemplate">
+      <div class="flex justify-center gap-10 mt-20">
+        
+        <div class="flex flex-col gap-2 justify-center">
+          
+          </div>
+        </div>
+    </template>
     <script type="module" src="../js/mode.mjs"></script>
+    <script type="module" src="../js/detail.js"></script>
   </body>
 </html>

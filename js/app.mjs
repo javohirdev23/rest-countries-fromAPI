@@ -1,5 +1,11 @@
-import { elTemplateCard, elContainer } from "./sourse.mjs";
+import {
+  elTemplateCard,
+  elContainer,
+  elSkeletonTemp,
+  elLoader,
+} from "./sourse.mjs";
 
+loader(true);
 fetch(
   `https://restcountries.com/v3.1/independent?status=true&fields=languages,capital,flags,region,subregion,name,population`,
 )
@@ -7,12 +13,15 @@ fetch(
     return res.json();
   })
   .then((res) => {
-    console.log(res);
-
-    ui(res);
+    // ui(res);
+    setTimeout(() => {
+      ui(res);
+    }, 1000);
   })
   .catch(() => {})
-  .finally(() => {});
+  .finally(() => {
+    loader(false);
+  });
 
 function ui(data) {
   data.forEach((element) => {
@@ -39,3 +48,15 @@ function ui(data) {
 elContainer.addEventListener("click", () => {
   location.href = "../inform.html/information.html";
 });
+
+// Loader skeleton
+
+function loader(boolean) {
+  elLoader.innerHTML = "";
+
+  if (boolean) {
+    Array.from({ length: 100 }, (_, index) => index).forEach(() => {
+      elLoader.appendChild(elSkeletonTemp.cloneNode(true).content);
+    });
+  }
+}
