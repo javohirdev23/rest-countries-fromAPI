@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/fiviconInfo.png "
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="flex justify-center">
+      <div
+        class="navbar bg-base-100 shadow-sm flex justify-between w-100 mx-auto mt-6 sm:w-150 md:w-190 xl:250 lg:w-300"
+      >
+        <div><a class="btn btn-ghost text-xl">Where in the world?</a></div>
+
+        <!-- light & dark mode  -->
+        <div class="pr-5">
+          <button class="btn dark__mode">🌙</button>
+          <button class="btn hidden light__mode">☀️</button>
+        </div>
+      </div>
+    </div>
+    <!-- Back button -->
+    <div class="tooltip ml-10 mt-10" data-tip="Back to Main">
+      <a href="..//index.html"
+        ><button class="btn"><span>← &nbsp;</span>Back</button></a
+      >
+    </div>
+    <div id="infoBox"></div>
+    <!-- Template card -->
+    <template id="infoTemplate">
+      <div class="flex justify-center flex-col items-center mb-10 gap-20 mt-10 md:flex-row  ">
+        <div>
+          <img class="rounded-2xl" width="560px" height="401px" src="" alt="" />
+        </div>
+        <div class="flex flex-col gap-2 justify-center">
+          <h2 class="name font-bold text-4xl pb-8"></h2>
+          <div class="flex">
+            <span class="not-dark:text-gray-900">Native name:&nbsp;&nbsp;</span>
+            <p class="nativeName notdatext-gray-700"></p>
+          </div>
+          <div class="flex">
+            <span class="notdatext-gray-900">Population:&nbsp;&nbsp;</span>
+            <p class="population notdatext-gray-700"></p>
+          </div>
+          <div class="flex">
+            <span class="notdatext-gray-900">Region:&nbsp;&nbsp;</span>
+            <p class="region notdatext-gray-700"></p>
+          </div>
+          <div class="flex">
+            <span class="notdatext-gray-900">Sub region:&nbsp;&nbsp;</span>
+            <p class="subRegion notdatext-gray-700"></p>
+          </div>
+          <div class="flex">
+            <span class="notdatext-gray-900">Capital:&nbsp;&nbsp;</span>
+            <p class="capital notdatext-gray-700"></p>
+          </div>
+        </div>
+      </div>
+    </template>
+    <!-- Template skeleton -->
+    <template id="infoTemplate">
+      <div class="flex justify-center gap-10 mt-20">
+        <div class="flex flex-col gap-2 justify-center"></div>
+      </div>
+    </template>
+    <script type="module" src="../js/mode.mjs"></script>
+    <script type="module" src="../js/detail.js"></script>
+  </body>
+</html>

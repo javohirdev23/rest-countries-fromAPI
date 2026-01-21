@@ -29,9 +29,11 @@
     </div>
 
     <div
-      class="flex w-90 mx-auto mt-10 justify-between gap-4 sm:w-140 md:w-180 xl:w-240 lg:w-290"
+      class="flex w-90 mx-auto mt-10 flex-col gap-4 sm:w-140 sm:flex-row md:w-180 justify-between xl:w-240 lg:w-290"
     >
-      <label class="input">
+      <label
+        class="input w-50 not-dark:bg-gray-200 hover:border-stone-700 sm:w-70"
+      >
         <svg
           class="h-[1em] opacity-50"
           xmlns="http://www.w3.org/2000/svg"
@@ -50,21 +52,29 @@
         </svg>
         <input type="search" required placeholder="Search" />
       </label>
-      <select class="select select-neutral w-40 sm:w-70">
+      <select class="select not-dark:dark:bg-gray-200 w-50 sm:w-70">
         <option disabled selected>Filter by region</option>
-        <option>Africa</option>
-        <option>America</option>
-        <option>Asia</option>
-        <option>Europe</option>
-        <option>Oceania</option>
+        <option value="africa">Africa</option>
+        <option value="america">America</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="oceania">Oceania</option>
       </select>
     </div>
     <!-- Container -->
 
     <div
       id="container"
-      class="grid grid-cols-1 gap-10 mt-12 justify-center md:grid-cols-3 xl:grid-cols-4 lg:w-7xl max-w-7xl mx-auto cursor-pointer"
+      class="grid grid-cols-1 gap-10 mt-12 justify-center  md:grid-cols-3 xl:grid-cols-4 lg:w-7xl max-w-7xl mx-auto cursor-pointer"
     ></div>
+
+    <div
+      id="loader"
+      class="grid grid-cols-1 gap-10  justify-center md:grid-cols-3 xl:grid-cols-4 lg:w-7xl max-w-7xl mx-auto cursor-pointer"
+    >
+  
+  </div>
+
     <!-- Card template  -->
     <template id="templateCard">
       <div class="tooltip" data-tip="More Information">
@@ -74,7 +84,7 @@
           <figure>
             <img src="" alt="countr flag" />
           </figure>
-          <div class="card-body grid justify-center items-center">
+          <div class="card-body grid justify-center items-center" id="cardBody"> 
             <h2 class="name font-bold text-10"></h2>
             <div class="flex pt-4">
               <span class="font-bold">Population:&nbsp;</span>
@@ -91,6 +101,17 @@
           </div>
         </div>
       </div>
+    </template>
+    <!-- Template skeleton -->
+          <template id="templateSkeleton">
+      <div class="flex justify-center gap-10 ">
+        <div class="flex w-52 flex-col gap-4 mr-3 items-center">
+  <div class="skeleton h-44 w-66 "></div>
+  <div class="skeleton h-5.25 w-full"></div>
+  <div class="skeleton h-5.25 w-full"></div>
+  <div class="skeleton h-5.25 w-full"></div>
+  <div class="skeleton h-5.25 w-full"></div>
+</div>
     </template>
     <script type="module" src="../js/mode.mjs"></script>
     <script type="module" src="../js/app.mjs"></script>
