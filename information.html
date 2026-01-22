@@ -33,40 +33,70 @@
         ><button class="btn"><span>← &nbsp;</span>Back</button></a
       >
     </div>
+    <!-- Container of information -->
     <div id="infoBox"></div>
+
     <!-- Template card -->
     <template id="infoTemplate">
-      <div class="flex justify-center flex-col items-center mb-10 gap-20 mt-10 md:flex-row  ">
+      <div
+        class="flex justify-center flex-col items-center mb-10 gap-20 mt-10 md:flex-row"
+      >
         <div>
           <img class="rounded-2xl" width="560px" height="401px" src="" alt="" />
         </div>
+
         <div class="flex flex-col gap-2 justify-center">
           <h2 class="name font-bold text-4xl pb-8"></h2>
           <div class="flex">
-            <span class="not-dark:text-gray-900">Native name:&nbsp;&nbsp;</span>
-            <p class="nativeName notdatext-gray-700"></p>
+            <span class="not-dark:text-gray-900 font-bold"
+              >Native name:&nbsp;</span
+            >
+            <p class="nativeName not-dark:text-gray-700"></p>
           </div>
           <div class="flex">
-            <span class="notdatext-gray-900">Population:&nbsp;&nbsp;</span>
-            <p class="population notdatext-gray-700"></p>
+            <span class="not-dark:text-gray-900 font-bold"
+              >Population:&nbsp;&nbsp;</span
+            >
+            <p class="population not-dark:text-gray-700"></p>
           </div>
           <div class="flex">
-            <span class="notdatext-gray-900">Region:&nbsp;&nbsp;</span>
-            <p class="region notdatext-gray-700"></p>
+            <span class="not-dark:text-gray-900 font-bold"
+              >Region:&nbsp;&nbsp;</span
+            >
+            <p class="region not-dark:text-gray-700"></p>
           </div>
           <div class="flex">
-            <span class="notdatext-gray-900">Sub region:&nbsp;&nbsp;</span>
-            <p class="subRegion notdatext-gray-700"></p>
+            <span class="not-dark:text-gray-900 font-bold"
+              >Sub region:&nbsp;&nbsp;</span
+            >
+            <p class="subRegion not-dark:text-gray-700"></p>
           </div>
           <div class="flex">
-            <span class="notdatext-gray-900">Capital:&nbsp;&nbsp;</span>
-            <p class="capital notdatext-gray-700"></p>
+            <span class="not-dark:text-gray-900 font-bold"
+              >Capital:&nbsp;&nbsp;</span
+            >
+            <p class="capital not-dark:text-gray-700"></p>
+          </div>
+          <div class="flex">
+            <span class="not-dark:text-gray-900 font-bold"
+              >Top Level Domain: &nbsp;&nbsp;</span
+            >
+            <p class="tld not-dark:text-gray-700"></p>
+          </div>
+
+          <div class="flex">
+            <span class="not-dark:text-gray-900 font-bold"
+              >Languages: &nbsp;&nbsp;</span
+            >
+            <p class="languages not-dark:text-gray-700"></p>
           </div>
         </div>
       </div>
     </template>
+    <!-- skeleton div -->
+    <div id="loaderInfo"></div>
     <!-- Template skeleton -->
-    <template id="infoTemplate">
+    <template id="tempInoSkeleton">
       <div class="flex justify-center gap-10 mt-20">
         <div class="flex flex-col gap-2 justify-center"></div>
       </div>
