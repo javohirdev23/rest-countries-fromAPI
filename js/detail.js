@@ -15,7 +15,8 @@ function ui(data) {
   clone.querySelector("img").src = data.flags.svg;
   clone.querySelector(".name").innerText = data.name.common;
   clone.querySelector(".nativeName").innerText = data.name.official;
-  clone.querySelector(".population").innerText = data.population;
+  clone.querySelector(".population").innerText =
+    data.population.toLocaleString();
   clone.querySelector(".region").innerText = data.region;
   clone.querySelector(".subRegion").innerText = data.subregion;
   clone.querySelector(".capital").innerText = data.capital;
