@@ -7,6 +7,8 @@ const elRegionInput = document.querySelector(".select")
 const elTempInfoSkeleton = document.querySelector(".tempInoSkeleton")
 const elInfoLoader = document.querySelector(".loaderInfo")
 const elSearchInput = document.querySelector(".input")
+const elCard = document.querySelector(".card")
+const elBorderBtn = document.querySelector(".borderBtn")
 
 
-export { elTemplateCard, elContainer,elInfoTemp,elSkeletonTemp,elLoader,elSearchInput,elRegionInput,elTempInfoSkeleton,elInfoLoader};
+export { elTemplateCard, elBorderBtn, elCard, elContainer,elInfoTemp,elSkeletonTemp,elLoader,elSearchInput,elRegionInput,elTempInfoSkeleton,elInfoLoader};
