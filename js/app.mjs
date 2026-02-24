@@ -22,7 +22,15 @@ fetch(
   .then((res) => {
     ui(res);
   })
-  .catch(() => {})
+  .catch(() => {
+    elContainer.innerHTML = `<div class="flex flex-col w-full justify-center items-center ml-120 mt-30">
+
+<h1 class="text-4xl  text-dark font-bold in-dark:text-white">OPS !</h1>
+<h2 class="text-3xl text-dark pt-5 font-semibold in-dark:text-white">Something wrong </h2>
+
+ 
+</div>`;
+  })
   .finally(() => {
     loader(false);
   });
@@ -86,6 +94,14 @@ function searchCountry(nameCountr) {
     .then((res) => res.json())
     .then((res) => {
       ui(res);
+    })
+    .catch(() => {
+      elContainer.innerHTML = `      <div class="flex flex-col w-full justify-center items-center ml-120 mt-30">
+
+<h2 class="text-3xl text-dark pt-5 font-semibold in-dark:text-white"> Country Note Found! </h2>
+
+ 
+</div>`;
     });
 }
 // Loader skeleton
